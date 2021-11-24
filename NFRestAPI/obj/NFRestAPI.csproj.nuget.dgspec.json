@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Alex Ferraro\\source\\repos\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj": {}
+    "C:\\Users\\Alex Ferraro\\Desktop\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Alex Ferraro\\source\\repos\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj": {
+    "C:\\Users\\Alex Ferraro\\Desktop\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Alex Ferraro\\source\\repos\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Alex Ferraro\\Desktop\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj",
         "projectName": "NFRestAPI",
-        "projectPath": "C:\\Users\\Alex Ferraro\\source\\repos\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj",
+        "projectPath": "C:\\Users\\Alex Ferraro\\Desktop\\NFRestAPI\\NFRestAPI\\NFRestAPI.csproj",
         "packagesPath": "C:\\Users\\Alex Ferraro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Alex Ferraro\\source\\repos\\NFRestAPI\\NFRestAPI\\obj\\",
+        "outputPath": "C:\\Users\\Alex Ferraro\\Desktop\\NFRestAPI\\NFRestAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

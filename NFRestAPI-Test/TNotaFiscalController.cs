@@ -7,13 +7,14 @@ using NFRestAPI.Infrastructure.EntityTypes;
 using NUnit.Framework;
 using System;
 using System.Collections.ObjectModel;
+using System.Threading.Tasks;
 
 namespace NFRestAPI_Test
 {
     public class TNotaFiscalController
     {
         [Test]
-        public async System.Threading.Tasks.Task GetNotaFiscalsByEmissionDateAsync() 
+        public async Task TestGetNotaFiscalsByEmissionDateAsync() 
         {
             var defaultNota = new NotaFiscal {
                 Codnota = 5
@@ -36,20 +37,17 @@ namespace NFRestAPI_Test
 
             repo.Setup(s => s.GetNotaFiscalByEmissionDateAsync(dataEmissao)).ReturnsAsync(notaFiscais);
 
-            repo.Verify();
+            var loggerMock = Mock.Of<ILoggerFactory>();
 
-            var loggerMock = new Mock<ILoggerFactory>();
-
-            loggerMock.Verify();
-
-            var nfc = new NotaFiscalController(loggerMock.Object);
+            var nfc = new NotaFiscalController(loggerMock);
 
             var response = await nfc.GetNotaFiscalsByEmissionDate(repo.Object, dataEmissao);
-            
+
+            repo.Verify(v => v.GetNotaFiscalByEmissionDateAsync(dataEmissao), Times.Once);
+
             var okObjectResult = response as OkObjectResult;
 
-            Assert.NotNull(okObjectResult);
+            Assert.AreEqual(okObjectResult.StatusCode, 200);
         }
-
     }
 }
