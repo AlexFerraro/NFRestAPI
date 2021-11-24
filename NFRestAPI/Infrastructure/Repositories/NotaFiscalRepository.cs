@@ -33,8 +33,7 @@ namespace NFRestAPI.Infrastructure.Repositories
             {
                 if (disposing)
                 {
-                    if(_context != null)
-                        _context.Dispose();
+                    _context?.Dispose();
                 }
                 disposedValue = true;
             }
